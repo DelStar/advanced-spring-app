@@ -33,6 +33,6 @@ docker-compose up -d
 docker ps -a
 ```
 ## License
-[DaleyStar]
+DaleyStar
 =======
 
