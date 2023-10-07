@@ -33,7 +33,7 @@ docker-compose up -d
 docker ps -a
 ```
 ## License
-[Jpizzle Tech]
+
+### [DaleyStar]
 =======
-# advanced-spring-app
->>>>>>> 159a784f12bee951d75c87fc88de1eece870dcaf
+
