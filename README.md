@@ -19,7 +19,7 @@ Create docker image using Dockerfile
 
 
 ```docker
-docker build -t jpizzletech/advanced-spring-app .
+docker build -t daleyhub/advanced-spring-app .
 ```
 
 ## Deploy Application Using Docker Compose 
