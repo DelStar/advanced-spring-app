@@ -7,11 +7,7 @@ mvn clean package
 ```
 
 ## Create Docker Image
-Docker is a continerization tool.Using docker we can deploy our applications as 
-
-containers using docker images. Containers contains application code and also the softwares,
-
-config files whatever is required for our application to run.
+Docker is a containerization tool. Using Docker, we can deploy our applications as containers using Docker images. Containers contain application code as well as the necessary software and configuration files required for our application to run.
 
 Create docker image using Dockerfile
 
