@@ -8,7 +8,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type = "t2.medium"
   #subnet_id = ??
   vpc_security_group_ids = [aws_security_group.ec2.id]
-  key_name               = "jptechkey" # Existing ssh key
+  key_name               = "auto" # Existing ssh key
   user_data              = file("jenkins-docker-script.sh")
 
   tags = {
@@ -22,7 +22,7 @@ resource "null_resource" "name" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/Downloads/jptechkey.pem")
+    private_key = file("~/Downloads/auto.pem")
     host        = aws_instance.ec2_instance.public_ip
   }
 

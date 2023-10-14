@@ -1,9 +1,9 @@
 variable "domainName" {
-  default = "sonar.jpizzletech.com"
+  default = "sonar.daleysphere.net"
   type    = string
 }
 
 variable "my_key" {
   type    = string
-  default = "class31key"
+  default = "auto"
 }
