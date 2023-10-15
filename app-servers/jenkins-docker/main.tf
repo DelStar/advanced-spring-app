@@ -4,7 +4,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-data "tls_private_key" "generated_key" {
+resource "tls_private_key" "generated_key" {
   algorithm = "RSA"
   rsa_bits  = 2048
 }
