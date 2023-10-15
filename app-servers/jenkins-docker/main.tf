@@ -10,8 +10,8 @@ data "tls_private_key" "generated_key" {
 }
 
 resource "aws_instance" "ec2_instance" {
-  ami           = data.aws_ami.amzlinux2.id
-  instance_type = "t2.medium"
+  ami                    = data.aws_ami.amzlinux2.id
+  instance_type          = "t2.medium"
   vpc_security_group_ids = [aws_security_group.ec2.id]
   user_data              = file("jenkins-docker-script.sh")
 
@@ -37,7 +37,7 @@ resource "null_resource" "generate_key" {
     triggers = {
       key_generated = "${null_resource.generate_key.*.id}"
     }
-  
+
     # Connection block inside the null_resource block
     connection {
       type        = "ssh"
@@ -45,13 +45,13 @@ resource "null_resource" "generate_key" {
       private_key = file("${path.module}/generated_key.pem")
       host        = aws_instance.ec2_instance.public_ip
     }
-  
+
     # Copy the jenkins-docker-script.sh file from your computer to the ec2 instance
     provisioner "file" {
       source      = "jenkins-docker-script.sh"
       destination = "/tmp/jenkins-docker-script.sh"
     }
-  
+
     # Set permissions and run the install_jenkins.sh file
     provisioner "remote-exec" {
       inline = [
@@ -59,7 +59,7 @@ resource "null_resource" "generate_key" {
         "sh /tmp/jenkins-docker-script.sh",
       ]
     }
-  
+
     # Wait for ec2 to be created
     depends_on = [aws_instance.ec2_instance]
   }
