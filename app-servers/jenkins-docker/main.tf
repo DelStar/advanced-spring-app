@@ -4,9 +4,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "tls_private_key" "generated_key" {
-  algorithm = "RSA"
-  rsa_bits  = 2048
+data "tls_private_key" "generated_key" {
+  rsa_bits = 4096
+}
+
+resource "null_resource" "generate_key" {
+  provisioner "local-exec" {
+    command = "echo ${data.tls_private_key.generated_key.private_key_pem} > generated_key.pem"
+  }
 }
 
 resource "aws_instance" "ec2_instance" {
