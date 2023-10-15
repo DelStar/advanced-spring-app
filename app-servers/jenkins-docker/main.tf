@@ -40,11 +40,11 @@ resource "null_resource" "generate_key" {
 }
 
 # Provisioner to generate private key
-provisioner "local-exec" {
-  command = <<-EOT
-    echo "${data.tls_private_key.generated_key.private_key_pem}" > generated_key.pem
-    EOT
-}
+  provisioner "local-exec" {
+    command = <<-EOT
+      echo "${data.tls_private_key.generated_key.private_key_pem}" > generated_key.pem
+      EOT
+  }
 
 resource "aws_instance" "ec2_instance" {
  ami      = data.aws_ami.amzlinux2.id
