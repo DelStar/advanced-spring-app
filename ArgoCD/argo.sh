@@ -20,8 +20,12 @@ kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
 kubectl get csv -n operators
 kubectl get pods -n operators
 
+kubectl config set-context minikube
+
 #Create the argo-controller script and apply it with this command
 kubectl apply -f argo-controller.yaml 
+
+sleep 180
 
 #change the service from ClusterIP to NodePort to access argocd on the browser
 kubectl edit svc example-argocd-server
