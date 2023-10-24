@@ -1,7 +1,7 @@
 [0m[1mdata.aws_route53_zone.selected: Reading...[0m[0m
 [0m[1mdata.aws_ami.Ubuntu: Reading...[0m[0m
+[0m[1mdata.aws_ami.Ubuntu: Read complete after 1s [id=ami-0ff834984748eaef2][0m
 [0m[1mdata.aws_route53_zone.selected: Read complete after 1s [id=Z00348892D8U7LZ011Y1F][0m
-[0m[1mdata.aws_ami.Ubuntu: Read complete after 1s [id=ami-0a6e38961e6e621b0][0m
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -11,7 +11,7 @@ Terraform will perform the following actions:
 
 [1m  # aws_instance.Sonarqube[0m will be created
 [0m  [32m+[0m[0m resource "aws_instance" "Sonarqube" {
-      [32m+[0m[0m ami                                  = "ami-0a6e38961e6e621b0"
+      [32m+[0m[0m ami                                  = "ami-0ff834984748eaef2"
       [32m+[0m[0m arn                                  = (known after apply)
       [32m+[0m[0m associate_public_ip_address          = (known after apply)
       [32m+[0m[0m availability_zone                    = (known after apply)
