@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: daleyhub/advanced-spring-app:2
+        image: daleyhub/advanced-spring-app:replaceImageTag
         ports:
         - containerPort: 8080
