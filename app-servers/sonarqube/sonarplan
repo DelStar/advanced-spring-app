@@ -1,6 +1,6 @@
 [0m[1mdata.aws_route53_zone.selected: Reading...[0m[0m
 [0m[1mdata.aws_ami.Ubuntu: Reading...[0m[0m
-[0m[1mdata.aws_ami.Ubuntu: Read complete after 1s [id=ami-0ff834984748eaef2][0m
+[0m[1mdata.aws_ami.Ubuntu: Read complete after 0s [id=ami-0ff834984748eaef2][0m
 [0m[1mdata.aws_route53_zone.selected: Read complete after 1s [id=Z00348892D8U7LZ011Y1F][0m
 
 Terraform used the selected providers to generate the following execution

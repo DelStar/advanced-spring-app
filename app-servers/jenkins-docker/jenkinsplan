@@ -1,5 +1,5 @@
 [0m[1mdata.aws_ami.amzlinux2: Reading...[0m[0m
-[0m[1mdata.aws_ami.amzlinux2: Read complete after 0s [id=ami-03d1b2fa19c17c9f1][0m
+[0m[1mdata.aws_ami.amzlinux2: Read complete after 1s [id=ami-0c9e929defa073d7d][0m
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -9,7 +9,7 @@ Terraform will perform the following actions:
 
 [1m  # aws_instance.ec2_instance[0m will be created
 [0m  [32m+[0m[0m resource "aws_instance" "ec2_instance" {
-      [32m+[0m[0m ami                                  = "ami-03d1b2fa19c17c9f1"
+      [32m+[0m[0m ami                                  = "ami-0c9e929defa073d7d"
       [32m+[0m[0m arn                                  = (known after apply)
       [32m+[0m[0m associate_public_ip_address          = (known after apply)
       [32m+[0m[0m availability_zone                    = (known after apply)

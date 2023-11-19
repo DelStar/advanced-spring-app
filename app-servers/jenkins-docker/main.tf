@@ -6,7 +6,7 @@ provider "aws" {
 resource "aws_instance" "ec2_instance" {
   ami           = data.aws_ami.amzlinux2.id
   instance_type = "t2.large"
-  #subnet_id = ??
+  #subnet_id 
   vpc_security_group_ids = [aws_security_group.ec2.id]
   key_name               = "daleykey" # Existing ssh key
   user_data              = file("jenkins-docker-script.sh")
